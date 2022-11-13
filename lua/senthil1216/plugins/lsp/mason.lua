@@ -23,10 +23,10 @@ mason_lspconfig.setup({
     "sumneko_lua",
     "emmet_ls",
     "dockerls",
-    "golangci_lint_ls",
     "gopls",
     "graphql",
+    "solargraph",
+    -- "golangci_lint_ls",
     --"ruby_ls",
-    --"solargraph",
   }
 })

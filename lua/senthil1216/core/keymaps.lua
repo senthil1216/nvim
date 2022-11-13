@@ -42,12 +42,14 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
 keymap.set("n", "<leader>[", "<cmd>:bprev<CR>")
 keymap.set("n", "<leader>]", "<cmd>:bnext<CR>")
 keymap.set("n", "<leader>y", ":let @+=expand('%') . ':' . line('.')<CR>")
 keymap.set("n", "<leader>/", "gcc", silent_noremap)
 keymap.set("v", "<leader>/", "gc", silent_noremap)
+keymap.set("n", "<leader>gb", ":.GBrowse<CR>")
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
