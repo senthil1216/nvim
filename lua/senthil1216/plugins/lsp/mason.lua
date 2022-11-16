@@ -25,7 +25,7 @@ mason_lspconfig.setup({
     "dockerls",
     "gopls",
     "graphql",
-    "solargraph",
+    -- "solargraph",
     -- "golangci_lint_ls",
     --"ruby_ls",
   }

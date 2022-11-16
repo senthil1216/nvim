@@ -48,8 +48,10 @@ end
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-require'lspconfig'.solargraph.setup{}
+-- require'lspconfig'.solargraph.setup{}
 require'lspconfig'.gopls.setup{}
+
+require'lspconfig'.yamlls.setup{}
 
 -- configure html server
 lspconfig["html"].setup({
@@ -57,10 +59,10 @@ lspconfig["html"].setup({
   on_attach = on_attach,
 })
 
-lspconfig["solargraph"].setup({
-   capabilities = capabilities,
-   on_attach = on_attach,
-})
+-- lspconfig["solargraph"].setup({
+--    capabilities = capabilities,
+--    on_attach = on_attach,
+-- })
 
 -- configure typescript server with plugin
 typescript.setup({
@@ -69,7 +71,6 @@ typescript.setup({
     on_attach = on_attach,
   },
 })
-
 
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({

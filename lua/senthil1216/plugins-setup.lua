@@ -47,6 +47,9 @@ return packer.startup(function(use)
 
   use("nvim-lualine/lualine.nvim")
 
+  use("junegunn/fzf")
+  use("junegunn/fzf.vim")
+
     -- fuzzy finding w/ telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
@@ -72,9 +75,7 @@ return packer.startup(function(use)
   use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
   use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 
-  use("junegunn/fzf")
-  use("junegunn/fzf.vim")
-
+ 
   -- using packer.nvim
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
@@ -97,7 +98,6 @@ return packer.startup(function(use)
   use('RRethy/nvim-treesitter-endwise')
   use('windwp/nvim-autopairs')
   use('fatih/vim-go')
-  -- use('ray-x/go.nvim')
   use {
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
@@ -111,4 +111,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-

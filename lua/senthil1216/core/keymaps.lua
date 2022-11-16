@@ -49,7 +49,7 @@ keymap.set("n", "<leader>]", "<cmd>:bnext<CR>")
 keymap.set("n", "<leader>y", ":let @+=expand('%') . ':' . line('.')<CR>")
 keymap.set("n", "<leader>/", "gcc", silent_noremap)
 keymap.set("v", "<leader>/", "gc", silent_noremap)
-keymap.set("n", "<leader>gb", ":.GBrowse<CR>")
+keymap.set("n", "<leader>gb", ":let @+= ':' . line('.') . ' ' . GBrowse<CR>")
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -99,4 +99,4 @@ local group = vim.api.nvim_create_augroup("ShowDocs", { clear = true})
 vim.api.nvim_create_autocmd(
   "FileType",
   { pattern = "go", command = [[inoremap <buffer> . .<C-x><C-o>]], group = group}
-  )
+)
